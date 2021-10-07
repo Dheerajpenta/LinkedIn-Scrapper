@@ -45,7 +45,8 @@ company_employees_link = "https://www.linkedin.com/" + links[0] + "&page="
 #scrapping employee's LinkedIn url's 
 employees_linkedin = []
 num = 1
-while len(employees_linkedin)<100:
+number_of_employees_to_scrap = 100
+while len(employees_linkedin)<=number_of_employees_to_scrap:
 
     browser.get(company_employees_link + str(num))
     src_2 = browser.page_source
